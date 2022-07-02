@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CombatCompanion.Admin", "Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CombatCompanion.Database", "CombatCompanion.Database\CombatCompanion.Database.csproj", "{2F6DD15B-A56A-4F1F-BAC8-63B21DA70C2C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CombatCompanion.DiscordBot", "CombatCompanion.DiscordBot\CombatCompanion.DiscordBot.csproj", "{61ECA6D5-14BF-4BF0-B096-BBFB81954262}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{2F6DD15B-A56A-4F1F-BAC8-63B21DA70C2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F6DD15B-A56A-4F1F-BAC8-63B21DA70C2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F6DD15B-A56A-4F1F-BAC8-63B21DA70C2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61ECA6D5-14BF-4BF0-B096-BBFB81954262}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61ECA6D5-14BF-4BF0-B096-BBFB81954262}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61ECA6D5-14BF-4BF0-B096-BBFB81954262}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61ECA6D5-14BF-4BF0-B096-BBFB81954262}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
