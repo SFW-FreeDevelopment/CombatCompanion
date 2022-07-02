@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CombatCompanion.Admin", "CombatCompanion.Admin\CombatCompanion.Admin.csproj", "{AC462AA1-79C3-4067-9CB2-16853EC03298}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CombatCompanion.Database", "CombatCompanion.Database\CombatCompanion.Database.csproj", "{2F6DD15B-A56A-4F1F-BAC8-63B21DA70C2C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC462AA1-79C3-4067-9CB2-16853EC03298}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC462AA1-79C3-4067-9CB2-16853EC03298}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC462AA1-79C3-4067-9CB2-16853EC03298}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC462AA1-79C3-4067-9CB2-16853EC03298}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F6DD15B-A56A-4F1F-BAC8-63B21DA70C2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F6DD15B-A56A-4F1F-BAC8-63B21DA70C2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F6DD15B-A56A-4F1F-BAC8-63B21DA70C2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F6DD15B-A56A-4F1F-BAC8-63B21DA70C2C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
