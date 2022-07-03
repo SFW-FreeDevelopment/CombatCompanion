@@ -8,7 +8,7 @@
     }
   },
   "profiles": {
-    "CombatCompanion.Web": {
+    "CombatCompanion.Admin": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
