@@ -1,6 +1,6 @@
 ﻿namespace CombatCompanion.Database.Enums;
 
-public enum SubType
+public enum EventSubType
 {
     Gaming,
     Live,
