@@ -4,17 +4,20 @@ using CombatCompanion.Database.Enums;
 
 namespace CombatCompanion.Database.Models;
 
-public class Event
+public class Event : BaseResource
 {
+    [Required] public List<MatchUp> MatchUps { get; set; } = new();
     [Required] public EventType EventType { get; set; } = EventType.Exhibition;
     [Required] public EventSubType EventSubType { get; set; } = EventSubType.Gaming;
     [Required] public TeamSize TeamSize { get; set; } = TeamSize.Singles;
+    [Required] public EventStatus EventStatus { get; set; } = EventStatus.Created;
     public FightLeague? FightLeague { get; set; }
 }
 
 public abstract class MatchUp
 {
     public string Title { get; set; }
+    public int Round { get; set; }
 }
 
 public class SinglesMatchUp : MatchUp
