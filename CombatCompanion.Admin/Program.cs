@@ -1,6 +1,9 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using CombatCompanion.Admin.Data;
+using CombatCompanion.Admin.Services;
+using CombatCompanion.Database.Repositories;
+using MongoDB.Driver;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +11,17 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
+builder.Services.AddScoped<IMongoClient, MongoClient>(_ =>
+        new MongoClient(
+            MongoClientSettings.FromConnectionString(builder.Configuration["MongoDatabaseConnectionString"])))
+    .AddScoped<GameRepository>()
+    .AddScoped<WalletRepository>()
+    .AddScoped<EventRepository>()
+    .AddScoped<FighterRepository>()
+    .AddScoped<BettingProfileService>()
+    .AddScoped<EventService>()
+    .AddScoped<FighterService>()
+    .AddScoped<WalletService>();
 
 var app = builder.Build();
 

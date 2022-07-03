@@ -6,6 +6,7 @@ namespace CombatCompanion.Database.Models;
 
 public class Event : BaseResource
 {
+    [Required] public string EventTitle { get; set; }
     [Required] public List<MatchUp> MatchUps { get; set; } = new();
     [Required] public EventType EventType { get; set; } = EventType.Exhibition;
     [Required] public EventSubType EventSubType { get; set; } = EventSubType.Gaming;

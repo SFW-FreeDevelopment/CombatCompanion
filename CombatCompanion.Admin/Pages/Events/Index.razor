@@ -1,0 +1,32 @@
+﻿@page "/events"
+@using CombatCompanion.Database.Models
+<h1>Events</h1>
+
+@if (_loadFailed)
+{
+    <h1>ERROR</h1>
+    <h3>@exception.Message</h3>
+    <p>@exception.StackTrace</p>
+}
+else if (_events == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <RadzenButton Icon="add_circle_outline" style="margin-bottom: 10px" Text="Add New" Click="@Create" ButtonStyle="ButtonStyle.Info" />
+    <RadzenGrid @ref="grid" AllowFiltering="true" FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" FilterMode="FilterMode.Advanced"
+                AllowPaging="true" PageSize="10" AllowSorting="true" Data="@_events" TItem="Event">
+        <Columns>
+            <RadzenGridColumn TItem="Event" Property="Id" Title="ID" />
+            <RadzenGridColumn TItem="Event" Property="Name" Title="Name"/>
+            <RadzenGridColumn TItem="Event" Property="CreatedAt" Title="Created At"/>
+            <RadzenGridColumn TItem="Event" Property="UpdatedAt" Title="Updated At"/>
+            <RadzenGridColumn TItem="Event" Title="Actions" Sortable="false" Filterable="false">
+                <Template Context="data">
+                    <RadzenButton Icon="mode_edit" style="margin-bottom: 10px" Click="@(_ => Edit(data.Id))" ButtonStyle="ButtonStyle.Secondary" />
+                </Template>
+            </RadzenGridColumn>
+        </Columns>
+    </RadzenGrid>
+}
