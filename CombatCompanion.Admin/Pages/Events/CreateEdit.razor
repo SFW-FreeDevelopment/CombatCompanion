@@ -2,17 +2,16 @@
 @page "/events/{Id}/edit"
 @attribute [Authorize]
 
-@using CombatCompanion.Database.Enums
 @using CombatCompanion.Database.Models
 @using CombatCompanion.Database.Constants
 
 @if (Id == null)
 {
-    <h1>Add Aquarium</h1>
+    <h1>Add Event</h1>
 }
 else
 {
-    <h1>Edit Aquarium<br/><small>ID: @Id</small></h1>
+    <h1>Edit Event<br/><small>ID: @Id</small></h1>
 }
 <hr/>
 
@@ -59,11 +58,13 @@ else
                             <RadzenDropDown style="width: 100%;" AllowClear="true" TValue="string" Data="EventConstants.EventSubTypes" @bind-Value="_event.EventSubType"/>
                         </div>
                     </div>
-                    <div class="col-md-4 align-items-center d-flex">
-                        <RadzenLabel Text="Event Type"/>
-                    </div>
-                    <div class="col-md-8">
-                        <RadzenDropDown style="width: 100%;" AllowClear="true" TValue="string" Data="EventConstants.FightLeagues" @bind-Value="_event.FightLeague"/>
+                    <div class="row mb-3">
+                        <div class="col-md-4 align-items-center d-flex">
+                            <RadzenLabel Text="Fight League"/>
+                        </div>
+                        <div class="col-md-8">
+                            <RadzenDropDown style="width: 100%;" AllowClear="true" TValue="string" Data="EventConstants.FightLeagues" @bind-Value="_event.FightLeague"/>
+                        </div>
                     </div>
                 </fieldset>
             </div>
