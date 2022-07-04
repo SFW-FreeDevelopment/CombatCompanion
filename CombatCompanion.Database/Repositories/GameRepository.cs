@@ -7,5 +7,6 @@ public class GameRepository : BaseRepository<Game>
 {
     public GameRepository(IMongoClient mongoClient) : base(mongoClient)
     {
+        CollectionName = "games";
     }
 }

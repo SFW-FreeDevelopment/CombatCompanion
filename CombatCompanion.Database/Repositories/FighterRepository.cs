@@ -7,5 +7,6 @@ public class FighterRepository : BaseRepository<Fighter>
 {
     public FighterRepository(IMongoClient mongoClient) : base(mongoClient)
     {
+        CollectionName = "fighters";
     }
 }

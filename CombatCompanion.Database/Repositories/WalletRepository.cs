@@ -7,5 +7,6 @@ public class WalletRepository : BaseRepository<Wallet>
 {
     public WalletRepository(IMongoClient mongoClient) : base(mongoClient)
     {
+        CollectionName = "wallets";
     }
 }

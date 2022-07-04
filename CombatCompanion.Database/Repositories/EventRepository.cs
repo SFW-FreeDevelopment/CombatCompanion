@@ -7,5 +7,6 @@ public class EventRepository : BaseRepository<Event>
 {
     public EventRepository(IMongoClient mongoClient) : base(mongoClient)
     {
+        CollectionName = "events";
     }
 }

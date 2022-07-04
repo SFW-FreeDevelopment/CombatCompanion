@@ -7,5 +7,6 @@ public class BettingProfileRepository : BaseRepository<BettingProfile>
 {
     public BettingProfileRepository(IMongoClient mongoClient) : base(mongoClient)
     {
+        CollectionName = "bettingprofiles";
     }
 }
