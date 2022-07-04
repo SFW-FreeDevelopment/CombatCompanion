@@ -1,5 +1,4 @@
 ﻿using CombatCompanion.Admin.Services;
-using CombatCompanion.Database.Enums;
 using CombatCompanion.Database.Models;
 using Microsoft.AspNetCore.Components;
 
@@ -14,7 +13,7 @@ public partial class CreateEdit
         
         private Event _event;
 
-        private bool _loadFailed = false;
+        private bool _loadFailed;
         private Exception _exception;
         
         protected override async Task OnParametersSetAsync()

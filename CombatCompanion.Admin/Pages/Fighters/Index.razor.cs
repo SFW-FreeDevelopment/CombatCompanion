@@ -3,15 +3,15 @@ using CombatCompanion.Database.Models;
 using Microsoft.AspNetCore.Components;
 using Radzen.Blazor;
 
-namespace CombatCompanion.Admin.Pages.Events;
+namespace CombatCompanion.Admin.Pages.Fighters;
 
 public partial class Index
 {
-    [Inject] private EventService EventService { get; set; }
+    [Inject] private FighterService FighterService { get; set; }
     [Inject] private NavigationManager NavigationManager { get; set; }
 
     
-    private List<Event> _events;
+    private List<Fighter> _fighters;
 
     private RadzenGrid<Event> _grid;
 
@@ -24,7 +24,7 @@ public partial class Index
         
         try
         {
-            _events = await EventService.GetAll();
+            _fighters = await FighterService.GetAll();
         }
         catch (Exception e)
         {
@@ -35,11 +35,11 @@ public partial class Index
 
     private void Create()
     {
-        NavigationManager.NavigateTo("/events/add");
+        NavigationManager.NavigateTo("/fighters/add");
     }
 
-    private void Edit(string eventId)
+    private void Edit(string fighterId)
     {
-        NavigationManager.NavigateTo($"/events/{eventId}/edit");
+        NavigationManager.NavigateTo($"/fighters/{fighterId}/edit");
     }
 }

@@ -1,5 +1,3 @@
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
 using CombatCompanion.Admin.Data;
 using CombatCompanion.Admin.Services;
 using CombatCompanion.Database.Repositories;

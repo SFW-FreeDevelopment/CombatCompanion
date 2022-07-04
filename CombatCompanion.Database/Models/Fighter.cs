@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using CombatCompanion.Database.Enums;
 
 namespace CombatCompanion.Database.Models;
 

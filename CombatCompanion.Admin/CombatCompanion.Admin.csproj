@@ -15,4 +15,14 @@
       <PackageReference Include="Radzen.Blazor" Version="3.18.16" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Pages\Wallets" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Pages\Events\CreateEdit.razor.cs">
+        <DependentUpon>CreateEdit.razor</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
 </Project>

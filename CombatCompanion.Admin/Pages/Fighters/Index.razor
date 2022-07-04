@@ -1,6 +1,6 @@
-﻿@page "/events"
+﻿@page "/fighters"
 @using CombatCompanion.Database.Models
-<h1>Events</h1>
+<h1>Fighters</h1>
 
 @if (_loadFailed)
 {
@@ -8,7 +8,7 @@
     <h3>@_exception.Message</h3>
     <p>@_exception.StackTrace</p>
 }
-else if (_events == null)
+else if (_fighters == null)
 {
     <p><em>Loading...</em></p>
 }
@@ -16,7 +16,7 @@ else
 {
     <RadzenButton Icon="add_circle_outline" style="margin-bottom: 10px" Text="Add New" Click="@Create" ButtonStyle="ButtonStyle.Info" />
     <RadzenGrid @ref="_grid" AllowFiltering="true" FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" FilterMode="FilterMode.Advanced"
-                AllowPaging="true" PageSize="10" AllowSorting="true" Data="@_events" TItem="Event">
+                AllowPaging="true" PageSize="10" AllowSorting="true" Data="@_fighters" TItem="Event">
         <Columns>
             <RadzenGridColumn TItem="Event" Property="Id" Title="ID" />
             <RadzenGridColumn TItem="Event" Property="Name" Title="Name"/>
