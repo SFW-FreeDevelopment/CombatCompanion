@@ -4,7 +4,7 @@ public static class EventConstants
 {
     public static readonly string[] EventTypes =
     {
-        "FightCard", "Tournament", "Exhibition"
+        "Fight Card", "Tournament", "Exhibition"
     };
     
     public static readonly string[] EventSubTypes =
@@ -14,6 +14,6 @@ public static class EventConstants
     
     public static readonly string[] FightLeagues =
     {
-        "UFC", "PFL", "EagleFC"
+        "UFC", "PFL", "Eagle FC"
     };
 }

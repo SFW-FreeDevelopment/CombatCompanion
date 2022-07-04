@@ -4,19 +4,19 @@ public class FighterConstants
 {
     public static readonly string[] WeightClasses =
     {
-        "Strawweight",
+        "Straw weight",
         "Flyweight",
-        "Batamweight",
+        "Bantamweight",
         "Featherweight",
         "Lightweight",
-        "SuperLightweight",
+        "Super Lightweight",
         "Welterweight",
-        "SuperWelterweight",
+        "Super Welterweight",
         "Middleweight",
-        "SuperMiddleweight",
-        "LightHeavyweight",
+        "Super Middleweight",
+        "Light Heavyweight",
         "Cruiserweight",
         "Heavyweight",
-        "SuperHeavyweight"
+        "Super Heavyweight"
     };
 }
