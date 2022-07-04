@@ -1,6 +1,11 @@
-﻿namespace CombatCompanion.Database.Repositories;
+﻿using CombatCompanion.Database.Models;
+using MongoDB.Driver;
 
-public class WalletRepository
+namespace CombatCompanion.Database.Repositories;
+
+public class WalletRepository : BaseRepository<Wallet>
 {
-    
+    public WalletRepository(IMongoClient mongoClient) : base(mongoClient)
+    {
+    }
 }

@@ -1,6 +1,11 @@
-﻿namespace CombatCompanion.Database.Repositories;
+﻿using CombatCompanion.Database.Models;
+using MongoDB.Driver;
 
-public class EventRepository
+namespace CombatCompanion.Database.Repositories;
+
+public class EventRepository : BaseRepository<Event>
 {
-    
+    public EventRepository(IMongoClient mongoClient) : base(mongoClient)
+    {
+    }
 }

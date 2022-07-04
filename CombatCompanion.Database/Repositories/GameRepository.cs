@@ -1,6 +1,11 @@
-﻿namespace CombatCompanion.Database.Repositories;
+﻿using CombatCompanion.Database.Models;
+using MongoDB.Driver;
 
-public class GameRepository
+namespace CombatCompanion.Database.Repositories;
+
+public class GameRepository : BaseRepository<Game>
 {
-    
+    public GameRepository(IMongoClient mongoClient) : base(mongoClient)
+    {
+    }
 }

@@ -1,0 +1,77 @@
+﻿@page "/events/add"
+@page "/events/{Id}/edit"
+@attribute [Authorize]
+
+@using CombatCompanion.Database.Enums
+@using CombatCompanion.Database.Models
+@using CombatCompanion.Database.Constants
+
+@if (Id == null)
+{
+    <h1>Add Aquarium</h1>
+}
+else
+{
+    <h1>Edit Aquarium<br/><small>ID: @Id</small></h1>
+}
+<hr/>
+
+@if (_loadFailed)
+{
+    <h1>ERROR</h1>
+    <h3>@_exception.Message</h3>
+    <p>@_exception.StackTrace</p>
+}
+else if (_event == null)
+{
+    <p>
+        <em>Loading...</em>
+    </p>
+}
+else
+{
+    <RadzenTemplateForm Data="@_event" Submit="@(async (Event args) => { await Submit(); })">
+        <div class="row">
+            <div class="col-md-6">
+                <fieldset>
+                    <legend>Details</legend>
+                    <div class="row mb-3">
+                        <div class="col-md-4 align-items-center d-flex">
+                            <RadzenLabel Text="Name"/>
+                        </div>
+                        <div class="col-md-8">
+                            <RadzenTextBox style="width: 100%;" Name="EventTitle" @bind-Value="_event.EventTitle"/>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-4 align-items-center d-flex">
+                            <RadzenLabel Text="Event Type"/>
+                        </div>
+                        <div class="col-md-8">
+                            <RadzenDropDown style="width: 100%;" AllowClear="true" TValue="string" Data="EventConstants.EventTypes" @bind-Value="_event.EventType"/>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-4 align-items-center d-flex">
+                            <RadzenLabel Text="Event Sub-Type"/>
+                        </div>
+                        <div class="col-md-8">
+                            <RadzenDropDown style="width: 100%;" AllowClear="true" TValue="string" Data="EventConstants.EventSubTypes" @bind-Value="_event.EventSubType"/>
+                        </div>
+                    </div>
+                    <div class="col-md-4 align-items-center d-flex">
+                        <RadzenLabel Text="Event Type"/>
+                    </div>
+                    <div class="col-md-8">
+                        <RadzenDropDown style="width: 100%;" AllowClear="true" TValue="string" Data="EventConstants.FightLeagues" @bind-Value="_event.FightLeague"/>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="col-md-6">
+
+            </div>
+        </div>
+    </RadzenTemplateForm>
+    <br/>
+    <br/>
+}

@@ -8,11 +8,12 @@ public class Event : BaseResource
 {
     [Required] public string EventTitle { get; set; }
     [Required] public List<MatchUp> MatchUps { get; set; } = new();
-    [Required] public EventType EventType { get; set; } = EventType.Exhibition;
-    [Required] public EventSubType EventSubType { get; set; } = EventSubType.Gaming;
-    [Required] public TeamSize TeamSize { get; set; } = TeamSize.Singles;
+    [Required] public string EventType { get; set; } = "";
+    [Required] public string EventSubType { get; set; } = "";
     [Required] public EventStatus EventStatus { get; set; } = EventStatus.Created;
-    public FightLeague? FightLeague { get; set; }
+    [Required] public bool IsTeamEvent { get; set; }
+    public string FightLeague { get; set; }
+    public int? TeamSize { get; set; }
 }
 
 public abstract class MatchUp
