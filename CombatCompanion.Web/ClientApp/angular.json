@@ -129,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "CombatCompanion.Web"
+  "defaultProject": "CombatCompanion.Web",
+  "cli": {
+    "analytics": false
+  }
 }
