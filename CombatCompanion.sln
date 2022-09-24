@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CombatCompanion.Web", "CombatCompanion.Web\CombatCompanion.Web.csproj", "{1904D3A2-9F33-4FC5-B76E-DDA68620380E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CombatCompanion.ThirdParty", "CombatCompanion.ThirdParty\CombatCompanion.ThirdParty.csproj", "{6CC1B050-F80E-4A0A-A9C6-990382B0D2A1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CombatCompanion.SportRadar", "CombatCompanion.SportRadar\CombatCompanion.SportRadar.csproj", "{6CC1B050-F80E-4A0A-A9C6-990382B0D2A1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CombatCompanion.Models", "CombatCompanion.Models\CombatCompanion.Models.csproj", "{6716E1E5-1BFB-408C-AB07-5DDE752935CD}"
 EndProject
